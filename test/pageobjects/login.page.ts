@@ -19,6 +19,9 @@ class LoginPage extends Page {
     public get btnSubmit () {
         return $('//*[@id="login-button"]');
     }
+    public get error () {
+        return $('//*[@data-test="error"]');
+    }
 
     /**
      * a method to encapsule automation code to interact with the page
