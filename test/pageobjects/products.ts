@@ -16,8 +16,16 @@ class Products extends Page {
         return $('//*[@data-test="shopping-cart-badge"]')
     }
 
+    public get filterButton() {
+        return $('//*[@data-test="product-sort-container"]')
+    }
+
     public open() {
         return super.open('inventory.html');
+    }
+
+    public get priceLowToHigher() {
+        return $('//select[@class="product_sort_container"]//option[3]')
     }
 
 }
